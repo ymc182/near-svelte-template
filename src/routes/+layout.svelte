@@ -38,6 +38,11 @@
 	@import "../styles/components.css";
 	nav {
 		padding: 10px;
+		background-color: white;
+		color: black;
+	}
+	a {
+		color: black;
 	}
 	.nav {
 		display: flex;
@@ -50,7 +55,7 @@
 	}
 	.nav button {
 		background: none;
-		color: white;
+		color: black;
 		border: none;
 		text-decoration: underline;
 		border-radius: 5px;
