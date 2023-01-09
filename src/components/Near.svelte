@@ -37,7 +37,7 @@
 <style>
 	button {
 		background: none;
-		color: white;
+		color: rgb(57, 237, 243);
 		border: none;
 		text-decoration: underline;
 		border-radius: 5px;

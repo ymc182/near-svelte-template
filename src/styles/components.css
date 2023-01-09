@@ -32,3 +32,15 @@ input {
 	border: 1px solid #fff;
 	transition: all 0.3s ease;
 }
+.btn {
+	background-color: #000;
+	color: #fff;
+	border: 0;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	border: 1px solid #fff;
+	transition: all 0.3s ease;
+}

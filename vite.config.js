@@ -1,22 +1,19 @@
 import { sveltekit } from "@sveltejs/kit/vite";
-import { NodeGlobalsPolyfillPlugin } from "@esbuild-plugins/node-globals-polyfill";
+import nodePolyfills from "vite-plugin-node-stdlib-browser";
 /** @type {import('vite').UserConfig} */
-const gpf = NodeGlobalsPolyfillPlugin({
-	buffer: true,
-	process: true,
-});
+
 const config = {
-	plugins: [sveltekit()],
+	plugins: [nodePolyfills(), sveltekit()],
+	optimizeDeps: {
+		disabled: false,
+	},
+	build: {
+		commonjsOptions: {
+			include: [],
+		},
+	},
 	test: {
 		include: ["src/**/*.{test,spec}.{js,ts}"],
-	},
-	optimizeDeps: {
-		esbuildOptions: {
-			define: {
-				global: "globalThis",
-			},
-			plugins: [gpf],
-		},
 	},
 };
 
